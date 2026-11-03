@@ -1,32 +1,23 @@
-class Operations
+using System;
+public static class Operations
 {
-    public static void Main(String[] args)
+    public static void Addition(int a, int b)
     {
-        Console.Write("Enter the value of X: ");
-        int x = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Enter the value of Y: ");
-        int y = Convert.ToInt32(Console.ReadLine());
-
-        Console.Write("Enter an operation: ");
-        string name = Console.ReadLine();
-
-        switch (name)
-        {
-            case "Addition":
-                Console.WriteLine("The answer after addition is:" + (x + y));
-                break;
-            case "Subtraction":
-                Console.WriteLine("The answer after subtraction is:" + (x - y));
-                break;
-            case "Multiplication":
-                Console.WriteLine("The answer after multiplication is:" + (x * y));
-                break;
-            case "Division":
-                Console.WriteLine("The answer after division is:" + (x / y));
-                break;
-            default:
-                Console.WriteLine("Invalid");
-                break;
-        }
+        int result = a + b;
+        Console.WriteLine("Addition: " + result);
+    }
+    public static void Subtraction(int a, int b)
+    {
+        int result = a - b;
+        Console.WriteLine("Subtraction: " + result);
+    }
+}
+public class Program
+{
+    static void Main(string[] args)
+    {
+        Operations.Addition(10, 5);
+        Operations op = new Operations();
+        op.Subtraction(10, 5);
     }
 }
